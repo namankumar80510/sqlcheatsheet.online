@@ -54,8 +54,9 @@ If you have php installed on your system (see link attached above to download PH
 
 1. **CLONE REPO**: run `git clone https://github.com/namankumar80510/sqlcheatsheet.online`. Change to the directory and proceed.
 2. **Install dependencies**: run `php composer.phar install` to install the dependencies for static site generator.
-3. **EDIT CONTENT**: You can edit the content inside `content` directory.
-4. **BUILD** (optional): You can just edit the content and make a pull request. However, if you also want to generate the html files, run `php build.php build` in the terminal and html pages will be generated inside html folder.
+3. **Run locally**: run in terminal -> `php -S localhost:8000 -t html/`. Now open `http://localhost:8000` in your browser.
+4. **EDIT CONTENT**: You can edit the content inside `content` directory.
+5. **BUILD** (optional): You can just edit the content and make a pull request. However, if you also want to generate the html files, run `php build.php build` in the terminal and html pages will be generated inside html folder.
 
 ## LICENSE
 
