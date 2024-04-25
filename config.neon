@@ -1,8 +1,6 @@
-site_name: UPSC Guide
-site_url: https://upscguide.in.net/
+site_name: SQL Cheat Sheet
+site_url: https://sqlcheatsheet.online/
 
 page_index:
     en:
-        /upsc.html: 1. About UPSC Civil Service Examination
     hi:
-        #/hindi/upsc.html: 1. यूपीएससी सिविल सेवा परीक्षा के बारे में
