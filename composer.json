@@ -4,7 +4,7 @@
         "league/plates": "^3.5",
         "nette/neon": "^3.4",
         "nette/utils": "^4.0",
-        "symfony/yaml": "^7.0"
+        "symfony/yaml": "*"
     },
     "config": {
         "lock": false,
