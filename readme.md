@@ -1,8 +1,6 @@
 # SQL Cheat Sheet or Quick Reference
 
-<a href="https://github.com/namankumar80510/sqlcheatsheet.online"><img src="https://img.shields.io/github/stars/namankumar80510/sqlcheatsheet.online?style=social"></a>
-
-<a href="https://github.com/namankumar80510/sqlcheatsheet.online/blob/main/LICENSE"><img src="https://img.shields.io/github/license/namankumar80510/sqlcheatsheet.online?style=social"></a>
+![license](https://img.shields.io/github/license/namankumar80510/sqlcheatsheet.online?style=social)
 
 A quick reference cheatsheet for SQL Developers. [**CURRENTLY UNDER DEVELOPMENT**]
 
