@@ -17,22 +17,23 @@ h1 a {
   text-decoration: none;
 }
 h2 {
-  font-size: 32px;
   line-height: 40px;
-  margin-top: 40px;
-}
-h2 a {
-  text-decoration: none;
+  @apply border-b-4 border-l-4 border-rose-600 mt-[40] text-[32px] p-2
 }
 p.next {
   margin-bottom: 20px;
 }
 p.footer {
-  font-size: 75%;
+  @apply text-rose-600 font-bold
 }
 div#container {
-  margin-bottom: 120px;
-  @apply p-8 mx-auto text-justify max-w-prose;
+  @apply p-8 mx-auto md:my-5 text-justify max-w-[75ch] border-t-8 rounded border-rose-800 bg-rose-50 shadow-lg;
+}
+footer {
+  @apply p-4 mx-auto max-w-[75ch] text-center text-sm;
+}
+footer a {
+  @apply text-rose-700
 }
 div#container p {
   padding-top: 20px;
@@ -100,9 +101,6 @@ a, a:visited {
 }
 .footer {
     @apply mt-10;
-}
-p.footer {
-  @apply text-gray-800;
 }
 p.footer a, p.footer a:visited {
   @apply text-gray-800;

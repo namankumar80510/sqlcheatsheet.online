@@ -11,12 +11,12 @@
     <?= $this->meta() ?>
 </head>
 
-<body>
+<body class="bg-rose-100">
 
     <div id="container">
 
         <div class="flex flex-row justify-between items-center">
-            <a href="/" class="font-bold">UPSC Guide</a>
+            <a href="/" class="font-bold"><?= config()['site_name'] ?></a>
         </div>
 
         <h1><?= $title ?></h1>
@@ -49,12 +49,15 @@
                 <?php endforeach ?>
             </ul>
         <?php endif ?>
+    </div>
 
+    <footer>
         <p class="footer">
             by <a href="https://github.com/namankumar80510" target="_blank">Naman Kumar</a> | <a
-                href="/about.html">about</a> | <a href="/languages.html">read in different language</a>
+                href="https://github.com/namankumar80510/sqlcheatsheet.online">source</a> | <a
+                href="https://github.com/namankumar80510/sqlcheatsheet.online">license</a>
         </p>
-    </div>
+    </footer>
 
     <script src="//instant.page/5.2.0" type="module"
         integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
