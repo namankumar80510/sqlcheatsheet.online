@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Georgia', 'Times', serif;
+}
+em {
+  font-style: italic;
+}
+h1 {
+  font-size: 38px;
+  line-height: 40px;
+  margin-top: 40px;
+}
+h1 a {
+  text-decoration: none;
+}
+h2 {
+  font-size: 32px;
+  line-height: 40px;
+  margin-top: 40px;
+}
+h2 a {
+  text-decoration: none;
+}
+p.next {
+  margin-bottom: 20px;
+}
+p.footer {
+  font-size: 75%;
+}
+div#container {
+  margin-bottom: 120px;
+  @apply p-8 mx-auto text-justify max-w-prose;
+}
+div#container p {
+  padding-top: 20px;
+}
+div#container ul {
+  padding-top: 20px;
+}
+table td {
+  border: 0;
+  outline: 0;
+}
+td.docs {
+  width: 420px;
+  max-width: 420px;
+  min-width: 420px;
+  min-height: 5px;
+  vertical-align: top;
+  text-align: left;
+}
+td.docs p {
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+td.code {
+  width: 480px;
+  max-width: 480px;
+  min-width: 480px;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-bottom: 5px;
+  vertical-align: top;
+}
+td.code.leading {
+  padding-bottom: 11px;
+}
+pre, code {
+  font-size: 14px; line-height: 18px;
+  font-family: 'Menlo', 'Monaco', 'Consolas', 'Lucida Console', monospace;
+}
+img.copy, img.run {
+  height: 16px;
+  width: 16px;
+  float: right
+}
+img.copy, img.run {
+  cursor: pointer;
+}
+img.copy {
+  margin-right: 4px;
+}
+
+
+/* Colors: light mode */
+body {
+  background-color: #ffffff;
+  color: #252519;
+}
+td.code.empty {
+  background: #ffffff;
+}
+a, a:visited {
+  color: #261a3b;
+}
+.footer {
+    @apply mt-10;
+}
+p.footer {
+  @apply text-gray-800;
+}
+p.footer a, p.footer a:visited {
+  @apply text-gray-800;
+}
+td.code {
+  background: #f0f0f0;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* Colors: dark mode */
+  body {
+    @apply bg-gray-950
+  }
+  td.code.empty {
+    background: #1f1f1f;
+  }
+  a, a:visited {
+    color: #e4e4e4;
+  }
+  p.footer {
+    color: #898e98;
+  }
+  p.footer a, p.footer a:visited {
+    color: #898e98;
+  }
+  td.code {
+    background: #282828;
+  }
+
+}
+
+/**Others*/
+.content a {
+    @apply underline underline-offset-4;
+}

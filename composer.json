@@ -1,0 +1,9 @@
+{
+    "require": {
+        "nette/utils": "^4.0",
+        "league/commonmark": "^2.4",
+        "league/plates": "^3.5",
+        "nette/neon": "^3.4",
+        "symfony/yaml": "^7.0"
+    }
+}
