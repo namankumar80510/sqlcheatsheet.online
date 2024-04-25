@@ -1,6 +1,9 @@
 vendor/
 node_modules/
 tmp/
+.idea/
+.vscode/
+.fleet/
 composer.lock
 package-lock.json
 ssh.py
