@@ -8,6 +8,8 @@ use League\CommonMark\Extension\Autolink\AutolinkExtension;
 use League\CommonMark\Extension\CommonMark\CommonMarkCoreExtension;
 use League\CommonMark\Extension\FrontMatter\FrontMatterExtension;
 use League\CommonMark\Extension\GithubFlavoredMarkdownExtension;
+use League\CommonMark\Extension\HeadingPermalink\HeadingPermalinkExtension;
+use League\CommonMark\Extension\TableOfContents\TableOfContentsExtension;
 use League\CommonMark\MarkdownConverter;
 use League\Plates\Engine;
 use Nette\Neon\Neon;
@@ -35,12 +37,24 @@ class MarkdownParser
     public function getConverter()
     {
         // Configure the Environment with all the CommonMark parsers/renderers
-        $environment = new Environment();
+        $environment = new Environment([
+            'table_of_contents' => [
+                'html_class' => 'table-of-contents',
+                'position' => 'placeholder',
+                'placeholder' => '[TOC]',
+                'style' => 'bullet',
+                'min_heading_level' => 1,
+                'max_heading_level' => 6,
+                'normalize' => 'relative',
+            ],
+        ]);
         $environment->addExtension(new CommonMarkCoreExtension())
             ->addExtension(new AttributesExtension())
             ->addExtension(new AutolinkExtension())
             ->addExtension(new GithubFlavoredMarkdownExtension())
-            ->addExtension(new FrontMatterExtension());
+            ->addExtension(new FrontMatterExtension())
+            ->addExtension(new HeadingPermalinkExtension())
+            ->addExtension(new TableOfContentsExtension());
 
         // Instantiate the converter engine and start converting some Markdown!
         $converter = new MarkdownConverter($environment);
@@ -59,7 +73,6 @@ class MarkdownParser
             'meta' => $frontMatter,
             'content' => $content
         ];
-
     }
 }
 
@@ -71,14 +84,14 @@ class TemplateRenderer
     public function __construct()
     {
         $this->engine = new Engine(TEMPLATE_PATH);
-        $this->engine->registerFunction("meta", function () {});
+        $this->engine->registerFunction("meta", function () {
+        });
     }
 
     public function render(string $template, array $data = []): string
     {
         return $this->engine->render($template, $data);
     }
-
 }
 
 class Commands
