@@ -17,6 +17,10 @@
 
         <div class="flex flex-row justify-between items-center">
             <a href="/" class="font-bold"><?= config()['site_name'] ?></a>
+            <a href="https://github.com/namankumar80510/sqlcheatsheet.online" target="_blank">
+                <img src="https://img.shields.io/github/stars/namankumar80510/sqlcheatsheet.online?style=social"
+                    alt="<?= config()['site_name'] ?> github stars">
+            </a>
         </div>
 
         <h1><?= $title ?></h1>
@@ -54,8 +58,8 @@
     <footer>
         <p class="footer">
             by <a href="https://github.com/namankumar80510" target="_blank">Naman Kumar</a> | <a
-                href="https://github.com/namankumar80510/sqlcheatsheet.online">source</a> | <a
-                href="https://github.com/namankumar80510/sqlcheatsheet.online">license</a>
+                href="https://github.com/namankumar80510/sqlcheatsheet.online" target="_blank">source</a> | <a
+                href="https://github.com/namankumar80510/sqlcheatsheet.online/blob/main/LICENSE" target="_blank">license</a>
         </p>
     </footer>
 
