@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
-    <meta name="description" content="Welcome">
+    <title>SQL Cheat Sheet</title>
+    <meta name="description" content="Access quick SQL references and examples for queries, joins, functions, etc. with our comprehensive cheat sheet! Dive into essential SQL commands, syntax, and tips for mastering databases.">
     <link rel=stylesheet href="/site.css">
     <link rel="shortcut icon" href="/favicon.png" type="image/png">
     </head>
@@ -22,21 +22,89 @@
             </a>
         </div>
 
-        <h1>Welcome</h1>
+        <h1>SQL Cheat Sheet</h1>
 
         <article class="content prose prose-zinc prose-img:rounded-xl max-w-none dark:prose-invert">
-            <p>Welcome.</p>
+            <p>Access quick SQL references and examples for queries, joins, functions with our comprehensive cheat sheet! Dive into essential SQL commands, syntax, and tips for mastering databases.</p>
 <h2><a id="content-table-of-contents" href="#content-table-of-contents" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>Table of Contents</h2>
 <ul class="table-of-contents">
 <li>
 <a href="#content-table-of-contents">Table of Contents</a>
 </li>
 <li>
-<a href="#content-this-is-a-h2">This is a H2</a>
+<a href="#content-quick-intro-to-sql">Quick Intro to SQL</a>
+</li>
+<li>
+<a href="#content-sql-basics-quick-reference-cheat-sheet">SQL Basics: Quick Reference Cheat Sheet</a>
+<ul>
+<li>
+<a href="#content-select-statement">SELECT Statement</a>
+</li>
+<li>
+<a href="#content-where-clause">WHERE Clause</a>
+</li>
+<li>
+<a href="#content-order-by-clause">ORDER BY Clause</a>
+</li>
+<li>
+<a href="#content-group-by-clause">GROUP BY Clause</a>
+</li>
+<li>
+<a href="#content-joins">JOINs</a>
+</li>
+<li>
+<a href="#content-distinct-keyword">DISTINCT Keyword</a>
+</li>
+<li>
+<a href="#content-limit-clause">LIMIT Clause</a>
 </li>
 </ul>
-<h2><a id="content-this-is-a-h2" href="#content-this-is-a-h2" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>This is a H2</h2>
-<p>Ok</p>
+</li>
+</ul>
+<h2><a id="content-quick-intro-to-sql" href="#content-quick-intro-to-sql" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>Quick Intro to SQL</h2>
+<ul>
+<li>SQL (Structured Query Language) is a standard programming language designed for managing and manipulating relational databases.</li>
+<li>It enables users to store, manipulate, and retrieve data from databases.</li>
+<li>SQL is used for various tasks such as querying data, inserting new data, updating existing data, and deleting data.</li>
+<li>It provides a wide range of commands and functions to perform these tasks, including SELECT, INSERT, UPDATE, DELETE, JOIN, and more.</li>
+<li>SQL operates on relational database management systems (RDBMS) like MySQL, PostgreSQL, SQL Server, Oracle, and SQLite.</li>
+<li>It uses a syntax based on English-like commands, making it relatively easy to learn and use for database operations.</li>
+<li>It is essential for developers, data analysts, and anyone dealing with databases to effectively manage and analyze data.</li>
+</ul>
+<h2><a id="content-sql-basics-quick-reference-cheat-sheet" href="#content-sql-basics-quick-reference-cheat-sheet" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>SQL Basics: Quick Reference Cheat Sheet</h2>
+<h3><a id="content-select-statement" href="#content-select-statement" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>SELECT Statement</h3>
+<pre><code class="language-sql">SELECT column1, column2
+FROM table_name;
+</code></pre>
+<h3><a id="content-where-clause" href="#content-where-clause" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>WHERE Clause</h3>
+<pre><code class="language-sql">SELECT column1, column2
+FROM table_name
+WHERE condition;
+</code></pre>
+<h3><a id="content-order-by-clause" href="#content-order-by-clause" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>ORDER BY Clause</h3>
+<pre><code class="language-sql">SELECT column1, column2
+FROM table_name
+ORDER BY column1 ASC|DESC;
+</code></pre>
+<h3><a id="content-group-by-clause" href="#content-group-by-clause" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>GROUP BY Clause</h3>
+<pre><code class="language-sql">SELECT column1, COUNT(*)
+FROM table_name
+GROUP BY column1;
+</code></pre>
+<h3><a id="content-joins" href="#content-joins" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>JOINs</h3>
+<pre><code class="language-sql">SELECT column1, column2
+FROM table1
+JOIN table2 ON table1.column_name = table2.column_name;
+</code></pre>
+<h3><a id="content-distinct-keyword" href="#content-distinct-keyword" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>DISTINCT Keyword</h3>
+<pre><code class="language-sql">SELECT DISTINCT column1, column2
+FROM table_name;
+</code></pre>
+<h3><a id="content-limit-clause" href="#content-limit-clause" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>LIMIT Clause</h3>
+<pre><code class="language-sql">SELECT column1, column2
+FROM table_name
+LIMIT number;
+</code></pre>
         </article>
 
                     </div>
