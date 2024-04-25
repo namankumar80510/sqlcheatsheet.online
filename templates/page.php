@@ -7,6 +7,7 @@
     <title><?= $title ?></title>
     <meta name="description" content="<?= $summary ?>">
     <link rel=stylesheet href="/site.css">
+    <link rel="stylesheet" href="/prism.css">
     <link rel="shortcut icon" href="/favicon.png" type="image/png">
     <?= $this->meta() ?>
 </head>
@@ -63,6 +64,7 @@
         </p>
     </footer>
 
+    <script src="/prism.js"></script>
     <script src="//instant.page/5.2.0" type="module"
         integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
 </body>
