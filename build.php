@@ -139,6 +139,15 @@ class Commands
 
         echo "Build complete.\n";
     }
+
+    public function serve()
+    {
+        echo "Building site... \n";
+        $this->build();
+        echo "Starting server... \n";
+        shell_exec('php -S localhost:6969 -t html');
+        echo "Started server on http://localhost:6969\n";
+    }
 }
 
 // ACTION.
@@ -153,5 +162,6 @@ $commands = new Commands();
 
 match ($arg) {
     'build' => $commands->build(),
+    'serve' => $commands->serve(),
     default => die("Unknown argument: $arg\n")
 };
