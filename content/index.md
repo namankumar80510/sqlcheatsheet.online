@@ -31,14 +31,6 @@ FROM table_name
 WHERE condition;
 ```
 
-### GROUP BY Clause
-
-```sql
-SELECT column1, COUNT(*)
-FROM table_name
-GROUP BY column1;
-```
-
 ### JOINs
 
 ```sql
