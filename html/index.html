@@ -39,13 +39,7 @@
 <a href="#content-sql-basics-quick-reference-cheat-sheet">SQL Basics: Quick Reference Cheat Sheet</a>
 <ul>
 <li>
-<a href="#content-select-statement">SELECT Statement</a>
-</li>
-<li>
 <a href="#content-where-clause">WHERE Clause</a>
-</li>
-<li>
-<a href="#content-order-by-clause">ORDER BY Clause</a>
 </li>
 <li>
 <a href="#content-group-by-clause">GROUP BY Clause</a>
@@ -58,6 +52,102 @@
 </li>
 <li>
 <a href="#content-limit-clause">LIMIT Clause</a>
+</li>
+<li>
+<a href="#content-and--or">AND / OR</a>
+</li>
+<li>
+<a href="#content-alter-table">ALTER TABLE</a>
+</li>
+<li>
+<a href="#content-as-alias">AS (alias)</a>
+</li>
+<li>
+<a href="#content-between">BETWEEN</a>
+</li>
+<li>
+<a href="#content-create-database">CREATE DATABASE</a>
+</li>
+<li>
+<a href="#content-create-table">CREATE TABLE</a>
+</li>
+<li>
+<a href="#content-create-index">CREATE INDEX</a>
+</li>
+<li>
+<a href="#content-create-view">CREATE VIEW</a>
+</li>
+<li>
+<a href="#content-delete">DELETE</a>
+</li>
+<li>
+<a href="#content-drop-database">DROP DATABASE</a>
+</li>
+<li>
+<a href="#content-drop-index">DROP INDEX</a>
+</li>
+<li>
+<a href="#content-drop-table">DROP TABLE</a>
+</li>
+<li>
+<a href="#content-exists">EXISTS</a>
+</li>
+<li>
+<a href="#content-group-by">GROUP BY</a>
+</li>
+<li>
+<a href="#content-having">HAVING</a>
+</li>
+<li>
+<a href="#content-in">IN</a>
+</li>
+<li>
+<a href="#content-insert-into">INSERT INTO</a>
+</li>
+<li>
+<a href="#content-inner-join">INNER JOIN</a>
+</li>
+<li>
+<a href="#content-left-join">LEFT JOIN</a>
+</li>
+<li>
+<a href="#content-right-join">RIGHT JOIN</a>
+</li>
+<li>
+<a href="#content-full-join">FULL JOIN</a>
+</li>
+<li>
+<a href="#content-like">LIKE</a>
+</li>
+<li>
+<a href="#content-order-by">ORDER BY</a>
+</li>
+<li>
+<a href="#content-select">SELECT</a>
+</li>
+<li>
+<a href="#content-select-">SELECT *</a>
+</li>
+<li>
+<a href="#content-select-distinct">SELECT DISTINCT</a>
+</li>
+<li>
+<a href="#content-select-into">SELECT INTO</a>
+</li>
+<li>
+<a href="#content-select-top">SELECT TOP</a>
+</li>
+<li>
+<a href="#content-truncate-table">TRUNCATE TABLE</a>
+</li>
+<li>
+<a href="#content-union">UNION</a>
+</li>
+<li>
+<a href="#content-union-all">UNION ALL</a>
+</li>
+<li>
+<a href="#content-update">UPDATE</a>
 </li>
 </ul>
 </li>
@@ -73,19 +163,11 @@
 <li>It is essential for developers, data analysts, and anyone dealing with databases to effectively manage and analyze data.</li>
 </ul>
 <h2><a id="content-sql-basics-quick-reference-cheat-sheet" href="#content-sql-basics-quick-reference-cheat-sheet" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>SQL Basics: Quick Reference Cheat Sheet</h2>
-<h3><a id="content-select-statement" href="#content-select-statement" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>SELECT Statement</h3>
-<pre><code class="language-sql">SELECT column1, column2
-FROM table_name;
-</code></pre>
+<p>Below, we have compiled a quick reference cheat sheet for SQL (Structured Query Language).</p>
 <h3><a id="content-where-clause" href="#content-where-clause" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>WHERE Clause</h3>
 <pre><code class="language-sql">SELECT column1, column2
 FROM table_name
 WHERE condition;
-</code></pre>
-<h3><a id="content-order-by-clause" href="#content-order-by-clause" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>ORDER BY Clause</h3>
-<pre><code class="language-sql">SELECT column1, column2
-FROM table_name
-ORDER BY column1 ASC|DESC;
 </code></pre>
 <h3><a id="content-group-by-clause" href="#content-group-by-clause" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>GROUP BY Clause</h3>
 <pre><code class="language-sql">SELECT column1, COUNT(*)
@@ -105,6 +187,197 @@ FROM table_name;
 <pre><code class="language-sql">SELECT column1, column2
 FROM table_name
 LIMIT number;
+</code></pre>
+<h3><a id="content-and--or" href="#content-and--or" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>AND / OR</h3>
+<pre><code class="language-sql">SELECT column_name(s)
+FROM table_name
+WHERE condition
+AND|OR condition
+</code></pre>
+<h3><a id="content-alter-table" href="#content-alter-table" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>ALTER TABLE</h3>
+<pre><code class="language-sql">ALTER TABLE table_name
+ADD column_name datatype
+</code></pre>
+<p>or</p>
+<pre><code class="language-sql">ALTER TABLE table_name
+DROP COLUMN column_name
+</code></pre>
+<h3><a id="content-as-alias" href="#content-as-alias" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>AS (alias)</h3>
+<pre><code class="language-sql">SELECT column_name AS column_alias
+FROM table_name
+</code></pre>
+<p>or</p>
+<pre><code class="language-sql">SELECT column_name
+FROM table_name AS table_alias
+</code></pre>
+<h3><a id="content-between" href="#content-between" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>BETWEEN</h3>
+<pre><code class="language-sql">SELECT column_name(s)
+FROM table_name
+WHERE column_name
+BETWEEN value1 AND value2
+</code></pre>
+<h3><a id="content-create-database" href="#content-create-database" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>CREATE DATABASE</h3>
+<pre><code class="language-sql">CREATE DATABASE database_name
+</code></pre>
+<h3><a id="content-create-table" href="#content-create-table" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>CREATE TABLE</h3>
+<pre><code class="language-sql">CREATE TABLE table_name
+(
+column_name1 data_type,
+column_name2 data_type,
+column_name3 data_type,
+...
+)
+</code></pre>
+<h3><a id="content-create-index" href="#content-create-index" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>CREATE INDEX</h3>
+<pre><code class="language-sql">CREATE INDEX index_name
+ON table_name (column_name)
+</code></pre>
+<p>or</p>
+<pre><code class="language-sql">CREATE UNIQUE INDEX index_name
+ON table_name (column_name)
+</code></pre>
+<h3><a id="content-create-view" href="#content-create-view" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>CREATE VIEW</h3>
+<pre><code class="language-sql">CREATE VIEW view_name AS
+SELECT column_name(s)
+FROM table_name
+WHERE condition
+</code></pre>
+<h3><a id="content-delete" href="#content-delete" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>DELETE</h3>
+<pre><code class="language-sql">DELETE FROM table_name
+WHERE some_column=some_value
+</code></pre>
+<p>or, run the below code to delete the entire table.</p>
+<pre><code class="language-sql">DELETE FROM table_name
+</code></pre>
+<h3><a id="content-drop-database" href="#content-drop-database" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>DROP DATABASE</h3>
+<pre><code class="language-sql">DROP DATABASE database_name
+</code></pre>
+<h3><a id="content-drop-index" href="#content-drop-index" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>DROP INDEX</h3>
+<pre><code class="language-sql">DROP INDEX table_name.index_name (SQL Server)
+DROP INDEX index_name ON table_name (MS Access)
+DROP INDEX index_name (DB2/Oracle)
+ALTER TABLE table_name
+DROP INDEX index_name (MySQL)
+</code></pre>
+<h3><a id="content-drop-table" href="#content-drop-table" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>DROP TABLE</h3>
+<pre><code class="language-sql">DROP TABLE table_name
+</code></pre>
+<h3><a id="content-exists" href="#content-exists" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>EXISTS</h3>
+<pre><code class="language-sql">IF EXISTS (SELECT * FROM table_name WHERE id = ?)
+BEGIN
+--do what needs to be done if exists
+END
+ELSE
+BEGIN
+--do what needs to be done if not
+END
+</code></pre>
+<h3><a id="content-group-by" href="#content-group-by" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>GROUP BY</h3>
+<pre><code class="language-sql">SELECT column_name, aggregate_function(column_name)
+FROM table_name
+WHERE column_name operator value
+GROUP BY column_name
+</code></pre>
+<h3><a id="content-having" href="#content-having" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>HAVING</h3>
+<pre><code class="language-sql">SELECT column_name, aggregate_function(column_name)
+FROM table_name
+WHERE column_name operator value
+GROUP BY column_name
+HAVING aggregate_function(column_name) operator value
+</code></pre>
+<h3><a id="content-in" href="#content-in" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>IN</h3>
+<pre><code class="language-sql">SELECT column_name(s)
+FROM table_name
+WHERE column_name
+IN (value1,value2,...)
+</code></pre>
+<h3><a id="content-insert-into" href="#content-insert-into" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>INSERT INTO</h3>
+<pre><code class="language-sql">INSERT INTO table_name
+VALUES (value1, value2, value3,...)
+</code></pre>
+<p>or</p>
+<pre><code class="language-sql">INSERT INTO table_name
+(column1, column2, column3,...)
+VALUES (value1, value2, value3,...)
+</code></pre>
+<h3><a id="content-inner-join" href="#content-inner-join" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>INNER JOIN</h3>
+<pre><code class="language-sql">SELECT column_name(s)
+FROM table_name1
+INNER JOIN table_name2
+ON table_name1.column_name=table_name2.column_name
+</code></pre>
+<h3><a id="content-left-join" href="#content-left-join" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>LEFT JOIN</h3>
+<pre><code class="language-sql">SELECT column_name(s)
+FROM table_name1
+LEFT JOIN table_name2
+ON table_name1.column_name=table_name2.column_name
+</code></pre>
+<h3><a id="content-right-join" href="#content-right-join" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>RIGHT JOIN</h3>
+<pre><code class="language-sql">SELECT column_name(s)
+FROM table_name1
+RIGHT JOIN table_name2
+ON table_name1.column_name=table_name2.column_name
+</code></pre>
+<h3><a id="content-full-join" href="#content-full-join" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>FULL JOIN</h3>
+<pre><code class="language-sql">SELECT column_name(s)
+FROM table_name1
+FULL JOIN table_name2
+ON table_name1.column_name=table_name2.column_name
+</code></pre>
+<h3><a id="content-like" href="#content-like" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>LIKE</h3>
+<pre><code class="language-sql">SELECT column_name(s)
+FROM table_name
+WHERE column_name
+LIKE pattern
+</code></pre>
+<h3><a id="content-order-by" href="#content-order-by" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>ORDER BY</h3>
+<pre><code class="language-sql">SELECT column_name(s)
+FROM table_name
+ORDER BY column_name [ASC|DESC]
+</code></pre>
+<h3><a id="content-select" href="#content-select" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>SELECT</h3>
+<pre><code class="language-sql">SELECT column_name(s)
+FROM table_name
+</code></pre>
+<h3><a id="content-select-" href="#content-select-" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>SELECT *</h3>
+<pre><code class="language-sql">SELECT *
+FROM table_name
+</code></pre>
+<h3><a id="content-select-distinct" href="#content-select-distinct" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>SELECT DISTINCT</h3>
+<pre><code class="language-sql">SELECT DISTINCT column_name(s)
+FROM table_name
+</code></pre>
+<h3><a id="content-select-into" href="#content-select-into" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>SELECT INTO</h3>
+<pre><code class="language-sql">SELECT *
+INTO new_table_name [IN externaldatabase]
+FROM old_table_name
+</code></pre>
+<p>or</p>
+<pre><code class="language-sql">SELECT column_name(s)
+INTO new_table_name [IN externaldatabase]
+FROM old_table_name
+</code></pre>
+<h3><a id="content-select-top" href="#content-select-top" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>SELECT TOP</h3>
+<pre><code class="language-sql">SELECT TOP number|percent column_name(s)
+FROM table_name
+</code></pre>
+<h3><a id="content-truncate-table" href="#content-truncate-table" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>TRUNCATE TABLE</h3>
+<pre><code class="language-sql">TRUNCATE TABLE table_name
+</code></pre>
+<h3><a id="content-union" href="#content-union" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>UNION</h3>
+<pre><code class="language-sql">SELECT column_name(s) FROM table_name1
+UNION
+SELECT column_name(s) FROM table_name2
+</code></pre>
+<h3><a id="content-union-all" href="#content-union-all" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>UNION ALL</h3>
+<pre><code class="language-sql">SELECT column_name(s) FROM table_name1
+UNION ALL
+SELECT column_name(s) FROM table_name2
+</code></pre>
+<h3><a id="content-update" href="#content-update" class="heading-permalink" aria-hidden="true" title="Permalink">¶</a>UPDATE</h3>
+<pre><code class="language-sql">UPDATE table_name
+SET column1=value, column2=value,...
+WHERE some_column=some_value
 </code></pre>
         </article>
 
